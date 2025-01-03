@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(to bottom, rgba(255, 183, 77, 0.7), rgba(34, 49, 63, 0.9)), url('https://cdn.pixabay.com/photo/2016/11/29/05/15/sunset-1867285_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 3rem;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .sunflowers {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            z-index: 1;
+        }
+
+        .sunflower {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn.pixabay.com/photo/2016/08/26/15/06/sunflower-1627193_1280.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+            position: relative;
+            margin: 10px;
+        }
+
+        .sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            animation: sparkle 5s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+
+        .register-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: #4a4a4a;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.6);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .register-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.8);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Special Concert!</h1>
+    <div class="sunflowers">
+        <div class="sunflower"></div>
+        <div class="sunflower"></div>
+        <div class="sunflower"></div>
+        <div class="sunflower"></div>
+        <div class="sunflower"></div>
+        <div class="sunflower"></div>
+    </div>
+    <div class="sparkles">
+        <div class="sparkle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 50%; left: 60%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 70%; left: 40%; animation-delay: 2s;"></div>
+    </div>
+    <button class="register-button" onclick="register()">Register for Concert</button>
+
+    <footer>
+        &copy; 2025 Special Concert. All rights reserved.
+    </footer>
+
+    <script>
+        function register() {
+            alert("You have successfully registered for today's special concert at 5:30pm EST Buubuu!");
+        }
+    </script>
+</body>
+</html>
