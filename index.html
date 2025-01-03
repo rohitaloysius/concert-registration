@@ -8,26 +8,19 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to top right, #ffe58a, #ff9a9e);
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(to bottom, rgba(255, 183, 77, 0.7), rgba(34, 49, 63, 0.9)), url('https://cdn.pixabay.com/photo/2016/11/29/05/15/sunset-1867285_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
             overflow: hidden;
         }
 
-        .sun {
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, #fff700, #ffa500);
-            border-radius: 50%;
-            box-shadow: 0 0 100px rgba(255, 223, 0, 0.7);
-            animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        h1 {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 3rem;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .sunflowers {
@@ -44,23 +37,12 @@
         .sunflower {
             width: 100px;
             height: 100px;
-            background: radial-gradient(circle, #ffeb3b, #ffc107);
+            background: url('https://cdn.pixabay.com/photo/2016/08/26/15/06/sunflower-1627193_1280.jpg') no-repeat center center;
+            background-size: cover;
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(255, 223, 0, 0.6);
+            box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
             position: relative;
             margin: 10px;
-        }
-
-        .sunflower::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: #795548;
-            border-radius: 50%;
         }
 
         .sparkles {
@@ -99,24 +81,35 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 15px 30px;
-            font-size: 18px;
-            background-color: #ffeb3b;
-            color: #795548;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: #4a4a4a;
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.6);
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .register-button:hover {
             transform: translate(-50%, -50%) scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.8);
         }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
     </style>
 </head>
 <body>
-    <div class="sun"></div>
+    <h1>Welcome to the Special Concert!</h1>
     <div class="sunflowers">
         <div class="sunflower"></div>
         <div class="sunflower"></div>
@@ -131,6 +124,10 @@
         <div class="sparkle" style="top: 70%; left: 40%; animation-delay: 2s;"></div>
     </div>
     <button class="register-button" onclick="register()">Register for Concert</button>
+
+    <footer>
+        &copy; 2025 Special Concert. All rights reserved.
+    </footer>
 
     <script>
         function register() {
